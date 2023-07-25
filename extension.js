@@ -4,7 +4,7 @@ const path = require('path');
 
 function activate(context) {
   // Register the command
-  let disposable = vscode.commands.registerCommand('extension.generateFiles', () => {
+  let disposable = vscode.commands.registerCommand('flutter-boilerplate-generator.generateFiles', () => {
     generateFiles();
   });
 

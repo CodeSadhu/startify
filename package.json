@@ -9,12 +9,15 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:extension.generateBoilerplate"
+  ],
+  "publisher": "CodeSadhu", 
   "main": "./extension.js",
   "contributes": {
     "commands": [{
-      "command": "flutter-boilerplate-generator.helloWorld",
-      "title": "Hello World"
+      "command": "flutter-boilerplate-generator.generateFiles",
+      "title": "Generate Boilerplate"
     }]
   },
   "scripts": {
