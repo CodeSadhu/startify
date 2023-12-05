@@ -2,7 +2,7 @@
   "name": "flutter-boilerplate-generator",
   "displayName": "Flutter Boilerplate Generator",
   "description": "Generate boilerplate files and folders for new Flutter projects.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.80.0"
   },
