@@ -42,7 +42,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Publish VSCE package
-        run: npx vsce publish -p ${{secrets.VSCE_TOKEN}}
+        run: npx vsce publish -p ${{secrets.GITHUB_TOKEN}}
