@@ -26,9 +26,6 @@ jobs:
       - name: Build VSCE package
         run: npm run vsce-package
 
-      - name: List contents of dist directory
-        run: ls -R dist
-
   create-release:
     needs: build
     runs-on: ubuntu-latest
