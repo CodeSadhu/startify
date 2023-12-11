@@ -26,33 +26,37 @@ jobs:
       - name: Build VSCE package
         run: npm run vsce-package
 
-  release:
+      - name: List contents of dist directory
+        run: ls -R dist
+
+  create-release:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 16
+          registry-url: https://npm.pkg.github.com/
 
       - name: Install dependencies
         run: npm install
 
-      - name: Extract version from package.json
-        id: extract_version
-        run: echo "::set-output name=version::$(node -e "console.log(require('./package.json').version)")"
-
       - name: Create release
         uses: actions/create-release@v1
         with:
-          tag_name: ${{ steps.extract_version.outputs.version }}
+          tag_name: v${{ steps.extract_version.outputs.version }}
           release_name: stable
           body: |
             Release notes for version ${{ steps.extract_version.outputs.version }}
 
             Add your release notes here.
+          assets: dist/*.vsix
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
