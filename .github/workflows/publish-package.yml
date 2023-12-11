@@ -1,8 +1,9 @@
-name: Build Visual Studio code package
+name: Build Visual Studio Code package
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -25,24 +26,33 @@ jobs:
       - name: Build VSCE package
         run: npm run vsce-package
 
-  publish-gpr:
+  release:
     needs: build
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          registry-url: https://npm.pkg.github.com/
 
       - name: Install dependencies
         run: npm install
 
-      - name: Publish VSCE package
-        run: npx vsce publish -p ${{secrets.ACTIONS_TOKEN}}
+      - name: Extract version from package.json
+        id: extract_version
+        run: echo "::set-output name=version::$(node -e "console.log(require('./package.json').version)")"
+
+      - name: Create release
+        uses: actions/create-release@v1
+        with:
+          tag_name: ${{ steps.extract_version.outputs.version }}
+          release_name: stable
+          body: |
+            Release notes for version ${{ steps.extract_version.outputs.version }}
+
+            Add your release notes here.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
