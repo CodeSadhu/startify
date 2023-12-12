@@ -1,11 +1,11 @@
 {
-  "name": "flutter-boilerplate-generator",
+  "name": "startify",
   "displayName": "Flutter Boilerplate Generator",
   "description": "Generate boilerplate files and folders for new Flutter projects.",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/CodeSadhu/boilerplate-vscode.git"
+    "url": "https://github.com/CodeSadhu/boilerplate-vscode.git"
   },
   "engines": {
     "vscode": "^1.80.0"
@@ -21,8 +21,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "flutter-boilerplate-generator.generateFiles",
-        "title": "Generate Boilerplate"
+        "command": "startify.initiate",
+        "title": "Startify: Generate Flutter Boilerplate"
       }
     ]
   },
