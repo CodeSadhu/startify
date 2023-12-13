@@ -7,7 +7,6 @@
 ## Table of Contents
 
 - [Startify - Your Swiss Army Knife for Flutter Projects](#startify---your-swiss-army-knife-for-flutter-projects)
-  - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Generated folder structure:](#generated-folder-structure)
   - [Getting Started](#getting-started)
@@ -66,7 +65,7 @@ Startify is easy to install and use. Here's how you can get started:
    - Press `F1` (or `Ctrl+Shift+P` / `Cmd+Shift+P` on Mac) to open the Command Palette.
    - Type "Startify: Generate Startify" and select the command when it appears in the list.
 
-That's it! The extension will work its magic, generating the necessary files and folders inside the `lib` folder of your Flutter project, including the `utils`, `providers`, `widgets`, and `screens` folders with the corresponding boilerplate code.
+That's it! The extension will work its magic, generating the necessary files and folders inside the `lib` folder of your Flutter project with the corresponding boilerplate code.
 
 ## Contributing
 
