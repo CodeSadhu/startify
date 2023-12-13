@@ -9,8 +9,7 @@
 - [Startify - Your Swiss Army Knife for Flutter Projects](#startify---your-swiss-army-knife-for-flutter-projects)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
-    - [But Wait, There's More!](#but-wait-theres-more)
-  - [Features](#features)
+  - [Generated folder structure:](#generated-folder-structure)
   - [Getting Started](#getting-started)
   - [Contributing](#contributing)
   - [License](#license)
@@ -19,11 +18,13 @@
 
 Welcome to Startify, your all-in-one companion for creating awesome Flutter projects with ease! Whether you're starting a new project or need to jump-start development on your next brilliant idea, Startify has got your back. Say goodbye to tedious repetitive setup tasks and hello to a smooth, delightful development experience.
 
-### But Wait, There's More!
-
 Startify isn't just another mundane extension. It's a Swiss Army Knife for Flutter projects! We've assembled a collection of useful tools and utilities inside the `utils` and `services` folder, so you can focus on building incredible apps rather than wasting time on boilerplate code.
 
-## Features
+## Generated folder structure:
+
+<p align="center">
+  <img src="assets/snap.png" alt="Folder Structure Illustration">
+</p>
 
 - **Shared Preferences Helper:**
   - *File:* `lib/utils/services/shared_preferences_helper.dart`

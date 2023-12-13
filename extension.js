@@ -545,6 +545,13 @@ function generateFiles() {
   "  }" +
   "}";
 
+  const utilsContent = 
+  "export 'assets.dart';\n" +
+  "export 'colors.dart';\n" +
+  "export 'constants.dart';\n" +
+  "export 'responsive.dart';\n" +
+  "export 'styles.dart';\n";
+
 
   // Write content to files
   fs.writeFileSync(path.join(utilsFolder, 'assets.dart'), assetsContent);
@@ -552,6 +559,7 @@ function generateFiles() {
   fs.writeFileSync(path.join(utilsFolder, 'constants.dart'), constantsContent);
   fs.writeFileSync(path.join(utilsFolder, 'responsive.dart'), responsiveContent);
   fs.writeFileSync(path.join(utilsFolder, 'styles.dart'), stylesContent);
+  fs.writeFileSync(path.join(utilsFolder, 'utils.dart'), utilsContent);
   fs.writeFileSync(path.join(servicesFolder, 'shared_preferences_helper.dart'), sharedPrefsContent);
 
   vscode.window.showInformationMessage('Flutter boilerplate files generated successfully!');

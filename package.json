@@ -1,11 +1,12 @@
 {
   "name": "startify",
-  "displayName": "Flutter Boilerplate Generator",
-  "description": "Generate boilerplate files and folders for new Flutter projects.",
+  "displayName": "Startify - Quickstart your Flutter project",
+  "description": "Startify generates boilerplate files and folders for your Flutter projects so you don't have to focus those mundane tasks.",
   "version": "1.0.0",
+  "icon": "assets/logo.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/CodeSadhu/boilerplate-vscode.git"
+    "url": "https://github.com/CodeSadhu/startify.git"
   },
   "engines": {
     "vscode": "^1.80.0"
@@ -14,7 +15,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.generateBoilerplate"
+    "onCommand:extension.initiate"
   ],
   "publisher": "CodeSadhu",
   "main": "./extension.js",
